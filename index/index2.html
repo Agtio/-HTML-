@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+  integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+  crossorigin="anonymous"
+/>
+    <title>历史人物</title>
+</head>
+<body>
+  <div class="mdui-appbar">
+    <div class="mdui-toolbar mdui-color-theme">
+      <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#drawer'}"><i class="mdui-icon material-icons">menu</i></button>
+      <a href="javascript:;" class="mdui-typo-title">历史人物</a>
+      <div class="mdui-toolbar-spacer"></div>
+      <div class="mdui-textfield mdui-textfield-expandable">
+        <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+        <input class="mdui-textfield-input" type="text" placeholder="Search"/>
+        <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
+      </div>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon" onclick="refresh()"><i class="mdui-icon material-icons">refresh</i></a>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+    </div>
+  </div>
+    <div class="mdui-drawer mdui-drawer-close" id="drawer">
+      <ul class="mdui-list">
+          <a href="./index.html" class="mdui-list-item">首页</a>
+          <a href="./index4.html" class="mdui-list-item">登录</a>
+          <a href="./index3.html" class="mdui-list-item">留言</a>
+          <li class="mdui-list-item" mdui-drawer-close>
+              关闭
+          </li>
+      </ul>
+    </div>
+    <div class="mdui-container">
+      <div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+          <div class="mdui-card-media">
+            <img src="./img/21.jpg"/>
+            <div class="mdui-card-media-covered">
+              <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">毛泽东</div>
+                <div class="mdui-card-primary-subtitle">学习</div>
+              </div>
+            </div>
+          </div>
+          <div class="mdui-card-actions">
+            <a class="mdui-btn mdui-ripple" href="./person1.html">查看</a>
+          </div>
+      </div>
+      <div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+        <div class="mdui-card-media">
+          <img src="./img/22.jpg">
+          <div class="mdui-card-media-covered">
+            <div class="mdui-card-primary">
+              <div class="mdui-card-primary-title">周恩来</div>
+              <div class="mdui-card-primary-subtitle">学习</div>
+            </div>
+          </div>
+        </div>
+        <div class="mdui-card-actions">
+          <a class="mdui-btn mdui-ripple" href="./person2.html">查看</a>
+        </div>
+    </div>
+    <div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+      <div class="mdui-card-media">
+        <img src="./img/24.jpg"/>
+        <div class="mdui-card-media-covered">
+          <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">彭德怀</div>
+            <div class="mdui-card-primary-subtitle">学习</div>
+          </div>
+        </div>
+      </div>
+      <div class="mdui-card-actions">
+        <a class="mdui-btn mdui-ripple" href="./person3.html">查看</a>
+      </div>
+  </div>
+  <div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+    <div class="mdui-card-media">
+      <img src="./img/25.jpg"/>
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">孙中山</div>
+          <div class="mdui-card-primary-subtitle">学习</div>
+        </div>
+      </div>
+    </div>
+    <div class="mdui-card-actions">
+      <a class="mdui-btn mdui-ripple" href="./person4.html">查看</a>
+    </div>
+</div>
+<div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+  <div class="mdui-card-media">
+    <img src="./img/26.jpg"/>
+    <div class="mdui-card-media-covered">
+      <div class="mdui-card-primary">
+        <div class="mdui-card-primary-title">邓小平</div>
+        <div class="mdui-card-primary-subtitle">学习</div>
+      </div>
+    </div>
+  </div>
+  <div class="mdui-card-actions">
+    <a class="mdui-btn mdui-ripple" href="./person5.html">查看</a>
+  </div>
+</div>
+<div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+  <div class="mdui-card-media">
+    <img src="./img/23.jpg"/>
+    <div class="mdui-card-media-covered">
+      <div class="mdui-card-primary">
+        <div class="mdui-card-primary-title">贺龙</div>
+        <div class="mdui-card-primary-subtitle">学习</div>
+      </div>
+    </div>
+  </div>
+  <div class="mdui-card-actions">
+    <a class="mdui-btn mdui-ripple" href="./person6.html">查看</a>
+  </div>
+</div>
+    </div>
+    <div class="mdui-fab-wrapper" mdui-fab="">
+        <a class="mdui-fab mdui-ripple mdui-color-theme-accent" href="./index.html">
+          <i class="mdui-icon material-icons">arrow_back</i>
+        </a>
+      </div>
+    <script
+  src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+  integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+  crossorigin="anonymous"
+></script>
+<script>
+  function refresh(){
+    mdui.snackbar({
+    message: '刷新成功',
+    position: 'left-bottom'
+  });
+  }
+</script>
+</body>
+</html>

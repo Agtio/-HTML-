@@ -1,0 +1,24 @@
+.a{
+    margin:0 auto;
+    overflow:hidden;
+    width: 50%;
+}
+h1{
+    text-align: center;
+}
+.b{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+img{
+    margin:0 auto;
+}
+.p1{
+    color: gray;
+}
+.c{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}

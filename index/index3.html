@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+  integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+  crossorigin="anonymous"
+/>
+	<title>简单留言板</title>
+	<script>
+		window.onload= function(){
+			document.getElementById("save").onclick = function(){
+				var oData = document.getElementById("message").value;
+				var oTime = new Date().getTime();
+				localStorage.setItem(oTime,oData);
+				loadStorage("msg");
+			}
+			document.getElementById("clear").onclick = function(){
+				localStorage.clear();
+				loadStorage("msg");
+			}
+			document.getElementById("read").onclick = function(){
+				loadStorage("msg");
+			}
+		}
+		function loadStorage(id){
+			var oR = "";
+			for(var i = 0; i < localStorage.length; i++){
+				var oV = localStorage.getItem(localStorage.key(i));
+				var oD = new Date();
+				oD.setTime(localStorage.key(i))
+				var sD = oD.toGMTString();
+
+				oR += "<div>" + "this is" + i + "message:" + oV + sD + "</div>";
+			}
+			var oTarget = document.getElementById(id);
+			oTarget.innerHTML = oR;
+		}
+	</script>
+</head>
+<body>
+	<div class="mdui-appbar">
+		<div class="mdui-toolbar mdui-color-theme">
+		  <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#drawer'}"><i class="mdui-icon material-icons">menu</i></button>
+		  <a href="javascript:;" class="mdui-typo-title">留言</a>
+		  <div class="mdui-toolbar-spacer"></div>
+		  <div class="mdui-textfield mdui-textfield-expandable">
+            <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+            <input class="mdui-textfield-input" type="text" placeholder="Search"/>
+            <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
+          </div>
+		  <a href="javascript:;" class="mdui-btn mdui-btn-icon" onclick="refresh()"><i class="mdui-icon material-icons">refresh</i></a>
+		  <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+		</div>
+	  </div>
+		<div class="mdui-drawer mdui-drawer-close" id="drawer">
+		  <ul class="mdui-list">
+			  <a href="./index.html" class="mdui-list-item">首页</a>
+			  <a href="./index4.html" class="mdui-list-item">登录</a>
+			  <a href="./index3.html" class="mdui-list-item">留言</a>
+			  <li class="mdui-list-item" mdui-drawer-close>
+				  关闭
+			  </li>
+		  </ul>
+		</div>
+	<h1>简单留言板</h1>
+	<textarea name="message" id="message" cols="60" rows="10"></textarea>
+	<br>
+	<input type="button" value="保存" id="save">
+	<input type="button" value="清空" id="clear">
+	<input type="button" value="读取" id="read">
+	<p id="msg"></p>
+	<div class="mdui-fab-wrapper" mdui-fab="">
+        <a class="mdui-fab mdui-ripple mdui-color-theme-accent" href="./index.html">
+          <i class="mdui-icon material-icons">arrow_back</i>
+        </a>
+      </div>
+	  <script
+  src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+  integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+  crossorigin="anonymous"
+></script>
+<script>
+	function refresh(){
+	  mdui.snackbar({
+	  message: '刷新成功',
+	  position: 'left-bottom'
+	});
+	}
+  </script>
+</body>
+</html>

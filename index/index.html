@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+  integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+  crossorigin="anonymous"
+/>
+    <title>吴育鹏</title>
+</head>
+<body>
+    <div class="mdui-appbar">
+        <div class="mdui-toolbar mdui-color-theme">
+          <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#drawer'}"><i class="mdui-icon material-icons">menu</i></button>
+          <a href="javascript:;" class="mdui-typo-title">首页</a>
+          <div class="mdui-toolbar-spacer"></div>
+          <div class="mdui-textfield mdui-textfield-expandable">
+            <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+            <input class="mdui-textfield-input" type="text" placeholder="Search"/>
+            <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
+          </div>
+          <a href="javascript:;" class="mdui-btn mdui-btn-icon" onclick="refresh()"><i class="mdui-icon material-icons">refresh</i></a>
+          <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+        </div>
+      </div>
+    </div>
+    <div class="mdui-drawer mdui-drawer-close" id="drawer">
+        <ul class="mdui-list">
+            <a href="./index2.html" class="mdui-list-item">历史人物</a>
+            <a href="./index4.html" class="mdui-list-item">登录</a>
+            <a href="./index3.html" class="mdui-list-item">留言</a>
+            <li class="mdui-list-item" mdui-drawer-close>
+                关闭
+            </li>
+        </ul>
+      </div>
+      
+    <div class="mdui-container">
+        <div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+            <div class="mdui-card-media">
+              <img src="./img/3.jpg"/>
+              <div class="mdui-card-media-covered">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">铭记奋斗</div>
+                  <div class="mdui-card-primary-subtitle">习近平：铭记奋斗历程担当历史使命 从党的奋斗历史中汲取前进力量</div>
+                </div>
+              </div>
+            </div>
+            <div class="mdui-card-actions">
+              <a class="mdui-btn mdui-ripple" href="./wz1.html">跳转</a>
+            </div>
+        </div>
+        <div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+            <div class="mdui-card-media">
+              <img src="./img/3.jpg"/>
+              <div class="mdui-card-media-covered">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">以史为镜、以史明志</div>
+                  <div class="mdui-card-primary-subtitle">习近平：以史为镜、以史明志，知史爱党、知史爱国</div>
+                </div>
+              </div>
+            </div>
+            <div class="mdui-card-actions">
+              <a class="mdui-btn mdui-ripple" href="./wz3.html">跳转</a>
+            </div>
+        </div>
+        <div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+            <div class="mdui-card-media">
+              <img src="./img/3.jpg"/>
+              <div class="mdui-card-media-covered">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">情况专访</div>
+                  <div class="mdui-card-primary-subtitle">整治形式主义老问题新表现</div>
+                </div>
+              </div>
+            </div>
+            <div class="mdui-card-actions">
+              <a class="mdui-btn mdui-ripple" href="./wz2.html">跳转</a>
+            </div>
+        </div>
+        <div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+            <div class="mdui-card-media">
+              <img src="./img/9.jpg"/>
+              <div class="mdui-card-media-covered">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">党史学习</div>
+                  <div class="mdui-card-primary-subtitle">习近平：在党史学习教育动员大会上的讲话</div>
+                </div>
+              </div>
+            </div>
+            <div class="mdui-card-actions">
+              <a class="mdui-btn mdui-ripple" href="./wz4.html">跳转</a>
+            </div>
+        </div>
+        <div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+            <div class="mdui-card-media">
+              <img src="./img/9.jpg"/>
+              <div class="mdui-card-media-covered">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">铸牢中华民族共同体意识</div>
+                  <div class="mdui-card-primary-subtitle">习近平参加内蒙古代表团审议</div>
+                </div>
+              </div>
+            </div>
+            <div class="mdui-card-actions">
+              <a class="mdui-btn mdui-ripple" href="./wz5.html">跳转</a>
+            </div>
+        </div>
+        <div class="mdui-card mdui-col-sm-4 mdui-col-md-4">
+            <div class="mdui-card-media">
+              <img src="./img/9.jpg"/>
+              <div class="mdui-card-media-covered">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">回信</div>
+                  <div class="mdui-card-primary-subtitle">习近平给上海市新四军历史研究会百岁老战士们回信</div>
+                </div>
+              </div>
+            </div>
+            <div class="mdui-card-actions">
+              <a class="mdui-btn mdui-ripple" href="./wz6.html">跳转</a>
+            </div>
+        </div>
+    </div>
+
+    <script
+  src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+  integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+  crossorigin="anonymous"
+></script>
+<script>
+  function refresh(){
+    mdui.snackbar({
+    message: '刷新成功',
+    position: 'left-bottom'
+  });
+  }
+</script>
+</body>
+</html>
